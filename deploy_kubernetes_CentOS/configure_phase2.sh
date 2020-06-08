@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+yum upgrade -y
+yum install -y open-vm-tools mc docker kubelet
+
+
 systemctl enable docker && systemctl start docker
 systemctl enable kubelet && systemctl start kubelet
 
